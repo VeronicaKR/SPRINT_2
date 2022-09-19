@@ -1,0 +1,25 @@
+$primary:#5265E1;
+$secondary:#FA5959;
+$dark:rgb(3, 3, 75);
+
+$accordion-icon-color: $primary;
+$accordion-icon-active-color:  $primary;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.nav-tabs{
+    --bs-nav-tabs-border-width: none;
+};
+.nav-tabs .nav-link{
+        border-bottom: 1px solid grey;
+        color:grey;
+    };
+.nav-tabs.nav-link:hover{
+            border-bottom: 3px solid orangered;
+            color:orangered
+};
+.nav-tabs .nav-link.active{
+            border-bottom: 3px solid orangered; 
+};
+
+
