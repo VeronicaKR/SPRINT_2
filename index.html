@@ -246,20 +246,20 @@
       </div>
     </div>
     <div class="row m-5">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="col-form-label"></label>
-          <input type="email" class="col-form-label" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <form class="row justify-content-center needs-validation" novalidate>
+        <div class="col-3 mb-3">
+          <input type="email" class="form-control" id="emailUser" placeholder="email" required>
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">EMAIL INCORRECT!</div>
+          </div>
+          <div class="col-2">
           <button type="submit" class="btn btn-secondary text-white">Contact Us</button>
+         </div>
+        
         </form>
-        </div>
+       
     </div>
   </div>
-
-
-
-
-
 
 <nav class="navbar navbar-expand-lg navbar-light bg-dark p-5 py-3">
   <div class="container-fluid">
@@ -298,5 +298,25 @@
 </footer>
 
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+
+(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
+
+
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
 </body>
 </html>
